@@ -15,7 +15,19 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django_rundeck.views import Route
+# from efforts.views import route
 
-urlpatterns = [
+# urlpatterns = [
+#     url(r'^routes', Route.as_view(), name='routes'),
+#     # url(r'^route/', include('efforts.urls')),
+#     url(r'^efforts/', include('efforts.urls')),
+#     url(r'^admin/', include(admin.site.urls)),
+# ]
+
+urlpatterns = patterns ('
+    url(r'^routes', Route.as_view(), name='routes'),
+    # url(r'^route/', include('efforts.urls')),
+    url(r'^efforts/', include('efforts.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
