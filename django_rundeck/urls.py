@@ -23,6 +23,8 @@ urlpatterns = [
     url(r'^routes/', include('routes.urls')),
     url(r'^efforts/', include('efforts.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    # url(r'^/', include(
+    url(r'^/?$', 'django_rundeck.views.homepage', name='home'),
 ]
 
 # urlpatterns = patterns ('
