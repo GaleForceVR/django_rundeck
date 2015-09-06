@@ -1,0 +1,9 @@
+{% if latest_effort_list %}
+    <ul>
+    {% for effort in latest_effort_list %}
+        <li><a href="/efforts/{{ effort.id }}/">{{ effort.created_at }} : {{ effort.route.location}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No efforts exist</p>
+{% endif %}
