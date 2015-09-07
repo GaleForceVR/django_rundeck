@@ -8,13 +8,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Your Website</title>
+  <link rel="stylesheet" type="text/css" href="{% static "css/screen.css" %}">
 </head>
 
 <body>
 
   <header>
-    <nav>
-      <div class="logo"><img src="{% static "img/rundeck-logo.png" %}" alt="Rundeck Logo" /></div>
+    <nav class="main-menu">
+      <div class="logo"><a href="/"><img src="{% static "img/rundeck-logo.png" %}" alt="Rundeck Logo" /></a></div>
       <ul>
         <li>Your menu</li>
       </ul>
