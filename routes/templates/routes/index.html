@@ -1,0 +1,20 @@
+{% extends "django_rundeck/homepage.html" %}
+
+{% block page %}
+
+    <div class="inner-wrapper">
+        <h1>Running Routes</h1>
+
+        {% if latest_route_list %}
+            <ul>
+            {% for route in latest_route_list %}
+                <li><a href="/routes/{{ route.id }}/">{{ route.location }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No routes exist</p>
+        {% endif %}
+
+    </div>
+
+{% endblock %}

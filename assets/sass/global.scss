@@ -7,27 +7,37 @@
 // $primaryOrange: #F1880B;
 // $primaryGreen: #67ce75;
 
+// Red
 $primaryRed: #bf7c76;
 $darkPrimaryRed: darken( $primaryRed, 8% );
 $primaryRedHighlight: #feaba3;
 
+// Navy
 $primaryNavy: #121828;
 $lightNavy: #374a7c;
 
+// Sand
 $darkSand: #ffe0cb;
 $lightSand: #fff8e5;
 
-$navTypeColor: #844944;
-$navTypeHover: #653834;
-
+// Grey
 $lightGrey: #ededed;
 $darkGrey: #cdcdcd;
 $darkerGrey: #b1b1b1;
 $blackGrey: #2f2f2f;
 
-// Type Colors
+// Nav Colors
+$navTypeColor: #844944;
+$navTypeHover: #653834;
+
+// Form Colors
+$formBackground: $darkGrey;
+$input: $lightGrey;
 $placeholder: $darkerGrey;
 $entered: $lightNavy;
+
+// Inner Wrapper Colors
+$primaryText: $lightNavy;
 
 * {
     margin: 0;
@@ -48,13 +58,16 @@ html, body {
 }
 
 footer {
-    height: 150px;
+    height: 100px;
     width: 100%;
     background-color: $primaryRed;
     color: black;
     position: absolute;
     bottom: 0;
     left: 0;
+    padding: 50px 0 0 20px;
+    color: $navTypeColor;
+    text-shadow: 1px 1px 2px $primaryRedHighlight;
 }
 
 body {
@@ -62,13 +75,14 @@ body {
     padding: 0;
     background-color: $primaryNavy;
     color: white;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     letter-spacing: 0.1em;
     color: $darkerGrey;
     background-image: url("/static/img/background.jpg");
     background-size: 100%;
     background-position: 0 0;
     background-repeat: no-repeat;
+    font-size: 1.0em;
 }
 
 a {
@@ -76,6 +90,21 @@ a {
     color: $lightGrey;
     &:hover {
         text-decoration: underline;
+    }
+}
+
+.inner-wrapper {
+    background-color: $lightGrey;
+    width: 60%;
+    margin: 2% 20% 10% 10%;
+    padding: 2% 5% 10% 5%;
+    color: $primaryText;
+    h1 {
+        font-size: 2.5em;
+        margin: 10px 0 10px 0;
+    }
+    a {
+        color: $primaryRed;
     }
 }
 

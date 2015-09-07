@@ -1,0 +1,29 @@
+{% extends "django_rundeck/homepage.html" %}
+
+{% block page %}
+
+    <div class="inner-wrapper">
+        {% if current_route %}
+            <h1>Route</h1>
+            <p>{{ current_route.location }}</p>
+            <p>{{ current_route.distance }} mi</p>
+        {% else %}
+            <p>This route does not exist</p>
+        {% endif %}
+        <div class="form-wrapper">
+            <form action="/routes/{{ current_route.id }}/edit/" method="post">
+                {% csrf_token %}
+                <label for="route{{ current_route.id }}">Location: 
+                    <input type="" name="location" id="route{{ current_route.id }}" value="{{ current_route.location }}" />
+                </label>
+                <label for="route{{ current_route.id }}">Distance: 
+                    <input type="" name="distance" id="route{{ current_route.id }}" value="{{ current_route.distance }}" />
+                </label>
+                <input type="submit" value="Save" />
+            </form>
+        </div>
+    </div>
+
+    
+
+{% endblock %}

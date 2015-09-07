@@ -24,12 +24,16 @@ html, body { height: 100%; }
 
 .container { padding-bottom: 150px; }
 
-footer { height: 150px; width: 100%; background-color: #bf7c76; color: black; position: absolute; bottom: 0; left: 0; }
+footer { height: 100px; width: 100%; background-color: #bf7c76; color: black; position: absolute; bottom: 0; left: 0; padding: 50px 0 0 20px; color: #844944; text-shadow: 1px 1px 2px #feaba3; }
 
-body { margin: 0; padding: 0; background-color: #121828; color: white; font-family: sans-serif; letter-spacing: 0.1em; color: #b1b1b1; background-image: url("/static/img/background.jpg"); background-size: 100%; background-position: 0 0; background-repeat: no-repeat; }
+body { margin: 0; padding: 0; background-color: #121828; color: white; font-family: Arial, sans-serif; letter-spacing: 0.1em; color: #b1b1b1; background-image: url("/static/img/background.jpg"); background-size: 100%; background-position: 0 0; background-repeat: no-repeat; font-size: 1.0em; }
 
 a { text-decoration: none; color: #ededed; }
 a:hover { text-decoration: underline; }
+
+.inner-wrapper { background-color: #ededed; width: 60%; margin: 2% 20% 10% 10%; padding: 2% 5% 10% 5%; color: #374a7c; }
+.inner-wrapper h1 { font-size: 2.5em; margin: 10px 0 10px 0; }
+.inner-wrapper a { color: #bf7c76; }
 
 .logo { position: relative; margin: 0; padding: 0; top: 3px; left: 10px; }
 
