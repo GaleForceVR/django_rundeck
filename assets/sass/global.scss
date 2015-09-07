@@ -1,17 +1,124 @@
+// $primaryBlue: #385a9a;
+// $darkPrimaryBlue: darken( $primaryBlue, 8% );
+// $darkerPrimaryBlue: darken( $primaryBlue, 15% );
+// $lightPrimaryBlue: lighten( $primaryBlue, 15% );
+// $lighterPrimaryBlue: lighten( $primaryBlue, 30% );
+// $lightestPrimaryBlue: lighten( $primaryBlue, 45% );
+// $primaryOrange: #F1880B;
+// $primaryGreen: #67ce75;
+
+$primaryRed: #bf7c76;
+$darkPrimaryRed: darken( $primaryRed, 8% );
+$primaryRedHighlight: #feaba3;
+$primaryNavy: #121828;
+$darkSand: #ffe0cb;
+$lightSand: #fff8e5;
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.super-wrapper {
+    min-height: 100%;
+    position: relative;
+    padding-top: 58px;
+}
+
+.container {
+    padding-bottom: 150px;
+}
+
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: $primaryRed;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    background-color: $primaryNavy;
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    color: $lightSand;
+    background-image: url("/static/img/background.jpg");
+    background-size: 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+    color: $primaryRed;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .logo {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  top: 3px;
-  left: 10px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 3px;
+    left: 10px;
 }
 
-nav {
-  background-color: #bf7c76;
-  height: 58px;
+nav.main-menu {
+    background-color: $primaryRed;
+    height: 58px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    box-shadow: 0 1px 10px black;
+    ul.nav-container {
+        position: absolute;
+        top: 0;
+        left: 267px;
+        li {
+            display: inline-block;
+            height: 58px;
+            float: left;
+            text-transform: uppercase;
+            a {
+                height: 58px;
+                width: 100%;
+                padding: 21px 40px 20px 40px;
+                position: relative;
+                top: 21px;
+                color: black;
+                text-decoration: none;
+                font-family: sans-serif;
+                text-shadow: 1px 1px 2px $primaryRedHighlight;
+                letter-spacing: 0.05em;
+                &:hover {
+                    background: $darkPrimaryRed;
+                    text-shadow: 1px 1px 2px #e99891;
+                }
+            }
+        }
+    }
+}
+
+.runner {
+    position: absolute;
+    top: 0;
+    left: 62.5%;
+    width: 22.5%;
+    height: 1px;
+    padding-bottom: 300%;
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
