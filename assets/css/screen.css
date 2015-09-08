@@ -22,7 +22,7 @@ html, body { height: 100%; }
 
 .super-wrapper { min-height: 100%; position: relative; padding-top: 58px; }
 
-.container { padding-bottom: 150px; }
+.rundeck-container { padding-bottom: 150px; }
 
 footer { height: 100px; width: 100%; background-color: #bf7c76; color: black; position: absolute; bottom: 0; left: 0; padding: 50px 0 0 20px; color: #844944; text-shadow: 1px 1px 2px #feaba3; }
 
@@ -45,3 +45,5 @@ nav.main-menu ul.nav-container li a:hover { background: #b2615a; text-shadow: 1p
 
 .runner { position: absolute; top: 0; left: 62.5%; width: 22.5%; height: 1px; padding-bottom: 300%; }
 .runner img { width: 100%; height: auto; }
+
+.note { width: 150px; height: 150px; background-color: yellow; }

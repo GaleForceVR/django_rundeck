@@ -53,7 +53,7 @@ html, body {
     padding-top: 58px;
 }
 
-.container {
+.rundeck-container {
     padding-bottom: 150px;
 }
 
@@ -166,4 +166,12 @@ nav.main-menu {
         width: 100%;
         height: auto;
     }
+}
+
+// React Test Styles
+
+.note {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
 }

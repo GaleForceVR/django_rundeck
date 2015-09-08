@@ -1,4 +1,5 @@
 {% extends "django_rundeck/homepage.html" %}
+{% load staticfiles %}
 
 {% block page %}
 
@@ -10,6 +11,35 @@
         {% else %}
             <p>This route does not exist</p>
         {% endif %}
+
+        {# <script src="{% static "build/helloworld.js" %}"> #}
+        {# comment this script tag back in and pre-compile the jsx in the command line for production #}   
+        {# </script> #}
+
+        <div id="react-test"></div>
+        <div id="react-container"></div>
+
+        <script src="{% static "js/Note.js" %}" type="text/jsx" ></script>
+
+
+{#        <script type="text/jsx">#}
+{#            var MyComponent = React.createClass({#}
+{#                render: function() {#}
+{#                    return <div>#}
+{#                            <h1>{this.props.crazy}</h1>#}
+{#                            <p>{this.props.children}</p>#}
+{#                    </div>;#}
+{#                }#}
+{#            });#}
+{##}
+{#            React.render(<div>#}
+{#                            <MyComponent crazy="Hey">This is a Hey</MyComponent>#}
+{#                            <MyComponent crazy="This is">This is a this</MyComponent>#}
+{#                            <MyComponent crazy="Crazy">This is Crazy</MyComponent>#}
+{#                </div>, document.getElementById('react-test'));#}
+{#        </script>#}
+
+        
         <div class="form-wrapper">
             <form action="/routes/{{ current_route.id }}/edit/" method="post">
                 {% csrf_token %}
