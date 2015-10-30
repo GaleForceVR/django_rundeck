@@ -29,3 +29,5 @@ nav.main-menu ul.nav-container li a:hover { background: #b2615a; text-shadow: 1p
 .runner img { width: 100%; height: auto; }
 
 .note { width: 150px; height: 150px; background-color: yellow; }
+
+.board { width: 250px; height: 250px; background-color: yellow; }
