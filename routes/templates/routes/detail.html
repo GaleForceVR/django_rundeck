@@ -3,7 +3,7 @@
 
 {% block page %}
 
-    <div class="inner-wrapper">
+    <div class="inner-wrapper" id="knockout-test">
         {% if current_route %}
             <h1>Route</h1>
             <p>{{ current_route.location }}</p>
@@ -20,6 +20,7 @@
         <div id="react-container"></div>
 
         <script src="{% static "js/Note.js" %}" type="text/jsx" ></script>
+        <script src="{% static "js/knockout_test.js" %}" type="text/jsx" ></script>
 
 
 {#        <script type="text/jsx">#}
@@ -51,9 +52,14 @@
                 </label>
                 <input type="submit" value="Save" />
             </form>
+
+            <p>First name: <strong data-bind="text: firstName ">todo</strong></p>
+            <p>Last name: <strong data-bind="text: lastName ">todo</strong></p>
         </div>
     </div>
 
-    
+<script>
+    KnockoutTest.init();
+</script>
 
 {% endblock %}

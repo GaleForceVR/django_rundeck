@@ -1,6 +1,8 @@
 {% extends "django_rundeck/homepage.html" %}
+{% load staticfiles %}
 
 {% block page %}
+
 
     <div class="inner-wrapper">
         <h1>Running Routes</h1>
@@ -15,6 +17,28 @@
             <p>No routes exist</p>
         {% endif %}
 
+       <!--  <p>First name: <strong data-bind="text: firstName ">todo</strong></p>
+        <p>Last name: <strong data-bind="text: lastName ">todo</strong></p>
+
+        <p>First name: <input data-bind="value: firstName" /></p>
+        <p>Last name: <input data-bind="value: lastName" /></p>
+
+        <p>Full name: <strong data-bind="text: fullName"></strong></p> -->
+
+        <ul data-bind="foreach: products">
+            <li class="product">
+                <strong data-bind="text: name"></strong>
+                <like-widget params="value: userRating"></like-widget>
+            </li>
+        </ul>
+
     </div>
+
+    <script>
+        $(window).load(function() {
+            console.log('let\'s try this');
+            KnockoutTestMe.init();
+        });
+    </script>
 
 {% endblock %}
