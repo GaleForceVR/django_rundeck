@@ -28,6 +28,53 @@
 
 var KnockoutTestMe = (function () {
 
+    function UtilityFunctions() {
+
+        console.log('exercise');
+        console.log($('#exercise'));
+        $('#exercise').append('<h1>Hello World</h1>');
+        // document.getElementById('exercise').appendChild('<h1>Hello World</h1>');
+
+        $('[data-role=master_container]').on('click', '[data-action=test_button]', function(e) {
+            var self = this;
+
+            var $master_container = $(e.delegateTarget);
+            // var $test_button_container = $(e.delegateTarget);
+            var $test_code_container = $($master_container).find('[data-role=test_code_container]');
+            var $test_button = $(e.currentTarget);
+
+            console.log('$test_button.text: ', $test_button.text());
+
+            // var $data_info = $($master_container).find('[data-role=test_code_container]');
+            // var routeId = $data_info.data('info');
+            // console.log('routeId: ', routeId);
+
+            // $data_info.css('display', 
+
+            // var $test_code_container = $master_container.find(['data-role=test_code_container']);
+            // console.log('$test_code_container: ', $test_code_container);
+
+            console.log('$master_container: ', $master_container);
+            // console.log('$test-button-container: ', $test_button_container);
+            console.log('$test-button: ', $test_button);
+
+            console.log('#test-button clicked!');
+            console.log(self);
+            console.log($(self));
+            console.log($(this));
+
+            if ($test_button.text() === 'SHOW CODE +') {
+                $test_button.text('HIDE CODE -');
+                $test_code_container.css('display', 'block');
+            } else {
+                $test_button.text('SHOW CODE +');
+                $test_code_container.css('display', 'none');
+            }
+            // $(self).next('[data-role=test_code_container]').css('display: block');
+        });
+    };
+    
+
     function init() {
         console.log('this worked as well');
         ko.applyBindings(new KnockoutTestViewModel(), document.getElementById('knockout-test'));
@@ -73,6 +120,7 @@ var KnockoutTestMe = (function () {
 
     return {
         init: init,
+        UtilityFunctions: UtilityFunctions,
         KnockoutTestViewModel: KnockoutTestViewModel
     }
 })();

@@ -7,10 +7,28 @@
     <div class="inner-wrapper">
         <h1>Running Routes</h1>
 
+        <div id="exercise"></div>
+
         {% if latest_route_list %}
             <ul>
             {% for route in latest_route_list %}
-                <li><a href="/routes/{{ route.id }}/">{{ route.location }}</a></li>
+                <li>
+                    <a href="/routes/{{ route.id }}/">{{ route.location }}</a>
+                    <div data-role="master_container">
+                        <div>
+                            <div data-role="test_button_container">
+                                <a href="#" class="test-button" data-action="test_button">SHOW CODE +</a>
+                                {# <div data-role="test_code_container" data-info="{{ route.id }}" class="test-code-container"><h1>Not the code</h1></div> #}
+                            </div>
+                        </div>
+                        <div data-role="test_code_container" class="test-code-container">
+                            <div>
+                                <h1 class="test-code">This is the Code for {{ route.id }}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
             {% endfor %}
             </ul>
         {% else %}
@@ -37,6 +55,7 @@
     <script>
         $(window).load(function() {
             console.log('let\'s try this');
+            KnockoutTestMe.UtilityFunctions();
             KnockoutTestMe.init();
         });
     </script>
